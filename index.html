@@ -9,16 +9,28 @@
 </head>
 <body>
     <div id="root">
-    
+
     </div>
     <script type="text/babel">
-        function Header() {
-            return (<h1>La maison jungle👋</h1>)
+        function Banner() {
+            let titre = "La maison jungle"
+            return <h1>{titre}</h1>
         }
-        function Description() {
-            return (<p>Ici achetez toutes les plantes dont vous avez toujours rêvé 🌵🌱🎍</p>)
+        function Cart(){
+            let prixMonstera = 8
+            let prixLierre = 10
+            let prixBouquet = 15
+            return (<div>
+                <h2>Panier</h2>
+                <ul>
+                    <li>Monstera : {prixMonstera} Fcfa</li>
+                    <li>Lierre : {prixLierre} Fcfa</li>
+                    <li>Bouquet de fleurs : {prixBouquet} Fcfa</li>
+                </ul>
+                <strong>Total : {prixMonstera + prixLierre + prixBouquet} Fcfa</strong>
+            </div>)
         }
-        ReactDOM.render(<div><Header /><Description /></div>, document.getElementById("root"))
+        ReactDOM.render(<div><Banner /><Cart /></div>, document.getElementById("root"))
     </script>
 
 
